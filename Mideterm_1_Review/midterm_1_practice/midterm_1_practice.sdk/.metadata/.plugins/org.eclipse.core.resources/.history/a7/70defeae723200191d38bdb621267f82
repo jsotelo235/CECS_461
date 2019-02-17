@@ -1,0 +1,61 @@
+/*
+ * midterm_1.c
+ *
+ *  Created on: Feb 14, 2019
+ *      Author: Jose Sotelo
+ */
+
+#include "xparameters.h"
+#include "xgpio.h"
+
+
+//====================================================
+
+int main (void)
+{
+
+    XGpio dip, push, led;
+	u32 psb_check, dip_check, led_check, leds;
+
+    xil_printf("-- Start of the Program --\r\n");
+
+    XGpio_Initialize(&dip, XPAR_SWITCHES_DEVICE_ID);
+	XGpio_SetDataDirection(&dip, 1, 0xffffffff);		// set as input
+
+	XGpio_Initialize(&push, XPAR_BUTTONS_DEVICE_ID);
+	XGpio_SetDataDirection(&push, 1, 0xffffffff);		// set as input
+
+	XGpio_Initialize(&led, XPAR_LEDS_DEVICE_ID);
+	XGpio_SetDataDirection(&led, 1, 0x00000000);		// set as output
+	leds = -1;
+
+	while (1)
+	{
+		psb_check = XGpio_DiscreteRead(&push, 1);
+		dip_check = XGpio_DiscreteRead(&dip, 1);
+
+
+		if(psb_check == 0x01)
+		{
+		  //led_check = XGpio_DiscreteRead(&led, 1);
+			leds = 0x01;
+			XGpio_DiscreteWrite(&led, 1, leds);
+			for (int i = 0; i < 10000000; i++);
+		  //xil_printf("Push Buttons Status %x\r\n", psb_check);
+		  //xil_printf("LEDs Status %x\r\n", led_check);
+		}
+		else
+		{
+		  leds = ~leds;
+		}
+
+		if(dip_check)
+		{
+			XGpio_DiscreteWrite(&led, 1, dip_check);
+			xil_printf("DIP Switch Status %x\r\n", dip_check);
+			xil_printf("LEDs Status %x\r\n", led_check);
+		}
+		sleep(1);
+	}
+}
+

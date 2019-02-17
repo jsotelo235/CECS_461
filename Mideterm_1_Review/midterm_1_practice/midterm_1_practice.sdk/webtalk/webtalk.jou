@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# 
+# Start of session at: Thu Feb 14 23:06:41 2019
+# Process ID: 4460
+# Current directory: D:/CSULB_Classes/CECS_461/Mideterm_1_Review/midterm_1_practice/midterm_1_practice.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: D:/CSULB_Classes/CECS_461/Mideterm_1_Review/midterm_1_practice/midterm_1_practice.sdk/webtalk/webtalk.log
+# Journal file: D:/CSULB_Classes/CECS_461/Mideterm_1_Review/midterm_1_practice/midterm_1_practice.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

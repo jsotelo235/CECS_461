@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../midterm_1_practice.srcs/sources_1/bd/midterm_1_practice/sim/midterm_1_practice.vhd" \
+
+nosort
