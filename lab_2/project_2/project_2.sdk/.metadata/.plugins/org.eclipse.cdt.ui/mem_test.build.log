@@ -1,8 +1,0 @@
-10:18:16 **** Incremental Build of configuration Debug for project mem_test ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for 'main-build'.
-
-10:18:17 Build Finished (took 1s.240ms)
-
