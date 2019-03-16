@@ -1,0 +1,458 @@
+20:30:22 INFO  : Registering command handlers for SDK TCF services
+20:30:23 INFO  : Launching XSCT server: xsct.bat -interactive D:\CSULB_Classes\CECS_461\Lab_1\project_1\project_1.sdk\temp_xsdb_launch_script.tcl
+20:30:28 INFO  : XSCT server has started successfully.
+20:30:29 INFO  : Successfully done setting XSCT server connection channel  
+20:30:29 INFO  : Successfully done setting SDK workspace  
+20:30:29 INFO  : Processing command line option -hwspec D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper.hdf.
+20:48:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:48:39 INFO  : Jtag cable 'Digilent Zybo Z7 210351A81A7FA' is selected.
+20:48:39 INFO  : 'jtag frequency' command is executed.
+20:48:39 INFO  : Sourcing of 'D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:48:39 INFO  : Context for 'APU' is selected.
+20:48:39 INFO  : Hardware design information is loaded from 'D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/system.hdf'.
+20:48:39 INFO  : 'configparams force-mem-access 1' command is executed.
+20:48:39 INFO  : Context for 'APU' is selected.
+20:48:39 INFO  : 'stop' command is executed.
+20:48:39 INFO  : 'ps7_init' command is executed.
+20:48:39 INFO  : 'ps7_post_config' command is executed.
+20:48:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:48:40 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+20:48:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:48:40 INFO  : The application 'D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/mem_test/Debug/mem_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:48:40 INFO  : 'configparams force-mem-access 0' command is executed.
+20:48:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+loadhw -hw D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+dow D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/mem_test/Debug/mem_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:48:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:48:40 INFO  : 'con' command is executed.
+20:48:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+con
+----------------End of Script----------------
+
+20:48:40 INFO  : Disconnected from the channel tcfchan#1.
+10:49:49 INFO  : Registering command handlers for SDK TCF services
+10:49:51 INFO  : Launching XSCT server: xsct.bat -interactive D:\CSULB_Classes\CECS_461\Lab_1\project_1\project_1.sdk\temp_xsdb_launch_script.tcl
+10:49:57 INFO  : XSCT server has started successfully.
+10:50:10 INFO  : Successfully done setting XSCT server connection channel  
+10:50:10 INFO  : Successfully done setting SDK workspace  
+10:50:10 INFO  : Processing command line option -hwspec D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper.hdf.
+10:50:11 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+10:51:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:51:30 INFO  : Jtag cable 'Digilent Zybo Z7 210351A81A7FA' is selected.
+10:51:30 INFO  : 'jtag frequency' command is executed.
+10:51:30 INFO  : Sourcing of 'D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:51:30 INFO  : Context for 'APU' is selected.
+10:51:31 INFO  : Hardware design information is loaded from 'D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/system.hdf'.
+10:51:31 INFO  : 'configparams force-mem-access 1' command is executed.
+10:51:31 INFO  : Context for 'APU' is selected.
+10:51:31 INFO  : 'stop' command is executed.
+10:51:32 INFO  : 'ps7_init' command is executed.
+10:51:32 INFO  : 'ps7_post_config' command is executed.
+10:51:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:51:33 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:51:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:51:34 INFO  : The application 'D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/mem_test/Debug/mem_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:51:34 INFO  : 'configparams force-mem-access 0' command is executed.
+10:51:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+loadhw -hw D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+dow D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/mem_test/Debug/mem_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:51:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:51:35 INFO  : 'con' command is executed.
+10:51:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+con
+----------------End of Script----------------
+
+10:51:35 INFO  : Disconnected from the channel tcfchan#1.
+10:54:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:54:10 INFO  : Jtag cable 'Digilent Zybo Z7 210351A81A7FA' is selected.
+10:54:10 INFO  : 'jtag frequency' command is executed.
+10:54:10 INFO  : Sourcing of 'D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:54:10 INFO  : Context for 'APU' is selected.
+10:54:11 INFO  : Hardware design information is loaded from 'D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/system.hdf'.
+10:54:11 INFO  : 'configparams force-mem-access 1' command is executed.
+10:54:11 INFO  : Context for 'APU' is selected.
+10:54:11 INFO  : 'stop' command is executed.
+10:54:11 INFO  : 'ps7_init' command is executed.
+10:54:11 INFO  : 'ps7_post_config' command is executed.
+10:54:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:54:12 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:54:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:54:12 INFO  : The application 'D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/mem_test/Debug/mem_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:54:12 INFO  : 'configparams force-mem-access 0' command is executed.
+10:54:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+loadhw -hw D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+dow D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/mem_test/Debug/mem_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:54:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:54:12 INFO  : 'con' command is executed.
+10:54:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+con
+----------------End of Script----------------
+
+10:54:12 INFO  : Disconnected from the channel tcfchan#2.
+10:55:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:55:41 INFO  : Jtag cable 'Digilent Zybo Z7 210351A81A7FA' is selected.
+10:55:41 INFO  : 'jtag frequency' command is executed.
+10:55:41 INFO  : Sourcing of 'D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:55:41 INFO  : Context for 'APU' is selected.
+10:55:41 INFO  : Hardware design information is loaded from 'D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/system.hdf'.
+10:55:41 INFO  : 'configparams force-mem-access 1' command is executed.
+10:55:41 INFO  : Context for 'APU' is selected.
+10:55:41 INFO  : 'stop' command is executed.
+10:55:42 INFO  : 'ps7_init' command is executed.
+10:55:42 INFO  : 'ps7_post_config' command is executed.
+10:55:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:55:42 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:55:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:55:42 INFO  : The application 'D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/mem_test/Debug/mem_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:55:42 INFO  : 'configparams force-mem-access 0' command is executed.
+10:55:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+loadhw -hw D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+dow D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/mem_test/Debug/mem_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:55:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:55:42 INFO  : 'con' command is executed.
+10:55:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+con
+----------------End of Script----------------
+
+10:55:42 INFO  : Disconnected from the channel tcfchan#3.
+11:03:11 INFO  : Registering command handlers for SDK TCF services
+11:03:13 INFO  : Launching XSCT server: xsct.bat -interactive D:\CSULB_Classes\CECS_461\Lab_1\project_1\project_1.sdk\temp_xsdb_launch_script.tcl
+11:03:19 INFO  : XSCT server has started successfully.
+11:03:20 INFO  : Successfully done setting XSCT server connection channel  
+11:03:20 INFO  : Successfully done setting SDK workspace  
+11:03:20 INFO  : Processing command line option -hwspec D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper.hdf.
+11:03:20 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+20:54:43 INFO  : Registering command handlers for SDK TCF services
+20:54:44 INFO  : Launching XSCT server: xsct.bat -interactive D:\CSULB_Classes\CECS_461\Lab_1\project_1\project_1.sdk\temp_xsdb_launch_script.tcl
+20:54:51 INFO  : XSCT server has started successfully.
+20:54:52 INFO  : Successfully done setting XSCT server connection channel  
+20:54:52 INFO  : Successfully done setting SDK workspace  
+20:54:52 INFO  : Processing command line option -hwspec D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper.hdf.
+20:54:52 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+21:42:41 INFO  : Registering command handlers for SDK TCF services
+21:42:43 INFO  : Launching XSCT server: xsct.bat -interactive D:\CSULB_Classes\CECS_461\Lab_1\project_1\project_1.sdk\temp_xsdb_launch_script.tcl
+21:42:49 INFO  : XSCT server has started successfully.
+21:42:49 INFO  : Successfully done setting XSCT server connection channel  
+21:42:49 INFO  : Successfully done setting SDK workspace  
+21:42:49 INFO  : Processing command line option -hwspec D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper.hdf.
+21:42:50 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+22:06:06 INFO  : Registering command handlers for SDK TCF services
+22:06:07 INFO  : Launching XSCT server: xsct.bat -interactive D:\CSULB_Classes\CECS_461\Lab_1\project_1\project_1.sdk\temp_xsdb_launch_script.tcl
+22:06:13 INFO  : XSCT server has started successfully.
+22:06:14 INFO  : Processing command line option -hwspec D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper.hdf.
+22:06:24 INFO  : Successfully done setting XSCT server connection channel  
+22:06:24 INFO  : Successfully done setting SDK workspace  
+22:06:25 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+22:13:09 INFO  : Registering command handlers for SDK TCF services
+22:13:10 INFO  : Launching XSCT server: xsct.bat -interactive D:\CSULB_Classes\CECS_461\Lab_1\project_1\project_1.sdk\temp_xsdb_launch_script.tcl
+22:13:17 INFO  : XSCT server has started successfully.
+22:13:17 INFO  : Successfully done setting XSCT server connection channel  
+22:13:17 INFO  : Processing command line option -hwspec D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper.hdf.
+22:13:28 INFO  : Successfully done setting SDK workspace  
+22:13:31 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+22:14:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:14:09 INFO  : Jtag cable 'Digilent Zybo Z7 210351A81A7FA' is selected.
+22:14:09 INFO  : 'jtag frequency' command is executed.
+22:14:09 INFO  : Sourcing of 'D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:14:10 INFO  : Context for 'APU' is selected.
+22:14:10 INFO  : Hardware design information is loaded from 'D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/system.hdf'.
+22:14:10 INFO  : 'configparams force-mem-access 1' command is executed.
+22:14:11 INFO  : Context for 'APU' is selected.
+22:14:11 INFO  : 'stop' command is executed.
+22:14:12 INFO  : 'ps7_init' command is executed.
+22:14:12 INFO  : 'ps7_post_config' command is executed.
+22:14:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:14:13 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:14:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:14:14 INFO  : The application 'D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/mem_test/Debug/mem_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:14:14 INFO  : 'configparams force-mem-access 0' command is executed.
+22:14:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+loadhw -hw D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+dow D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/mem_test/Debug/mem_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:14:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:14:15 INFO  : 'con' command is executed.
+22:14:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+con
+----------------End of Script----------------
+
+22:14:15 INFO  : Disconnected from the channel tcfchan#1.
+22:16:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:16:40 INFO  : Jtag cable 'Digilent Zybo Z7 210351A81A7FA' is selected.
+22:16:40 INFO  : 'jtag frequency' command is executed.
+22:16:40 INFO  : Sourcing of 'D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+22:16:40 INFO  : Context for 'APU' is selected.
+22:16:40 INFO  : Hardware design information is loaded from 'D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/system.hdf'.
+22:16:40 INFO  : 'configparams force-mem-access 1' command is executed.
+22:16:40 INFO  : Context for 'APU' is selected.
+22:16:40 INFO  : 'stop' command is executed.
+22:16:41 INFO  : 'ps7_init' command is executed.
+22:16:41 INFO  : 'ps7_post_config' command is executed.
+22:16:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:16:41 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+22:16:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:16:41 INFO  : The application 'D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/mem_test/Debug/mem_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:16:41 INFO  : 'configparams force-mem-access 0' command is executed.
+22:16:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+loadhw -hw D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+dow D:/CSULB_Classes/CECS_461/Lab_1/project_1/project_1.sdk/mem_test/Debug/mem_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:16:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:16:42 INFO  : 'con' command is executed.
+22:16:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+con
+----------------End of Script----------------
+
+22:16:42 INFO  : Disconnected from the channel tcfchan#2.
+23:04:30 INFO  : Launching XSCT server: xsct.bat -interactive D:\CSULB_Classes\CECS_461\Lab_2\project_2\project_2.sdk\temp_xsdb_launch_script.tcl
+23:04:36 INFO  : XSCT server has started successfully.
+23:04:53 INFO  : Successfully done setting XSCT server connection channel  
+23:04:53 INFO  : Successfully done setting SDK workspace  
+23:04:57 INFO  : Registering command handlers for SDK TCF services
+23:05:00 INFO  : Processing command line option -hwspec D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper.hdf.
+23:19:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:19:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA" && level==0} -index 1' command is executed.
+23:19:35 INFO  : FPGA configured successfully with bitstream "D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper_hw_platform_1/system_wrapper.bit"
+23:20:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA" && level==0} -index 1' command is executed.
+23:20:01 INFO  : 'fpga -state' command is executed.
+23:20:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:20:02 INFO  : Jtag cable 'Digilent Zybo Z7 210351A81A7FA' is selected.
+23:20:02 INFO  : 'jtag frequency' command is executed.
+23:20:02 INFO  : Sourcing of 'D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper_hw_platform_1/ps7_init.tcl' is done.
+23:20:02 INFO  : Context for 'APU' is selected.
+23:20:02 INFO  : Hardware design information is loaded from 'D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper_hw_platform_1/system.hdf'.
+23:20:02 INFO  : 'configparams force-mem-access 1' command is executed.
+23:20:02 INFO  : Context for 'APU' is selected.
+23:20:03 INFO  : 'stop' command is executed.
+23:20:03 INFO  : 'ps7_init' command is executed.
+23:20:03 INFO  : 'ps7_post_config' command is executed.
+23:20:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:20:03 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:20:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:20:04 INFO  : The application 'D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/TestApp/Debug/TestApp.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:20:04 INFO  : 'configparams force-mem-access 0' command is executed.
+23:20:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper_hw_platform_1/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+loadhw -hw D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper_hw_platform_1/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+dow D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/TestApp/Debug/TestApp.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:20:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:20:04 INFO  : 'con' command is executed.
+23:20:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+con
+----------------End of Script----------------
+
+23:20:04 INFO  : Disconnected from the channel tcfchan#1.
+23:56:28 INFO  : Registering command handlers for SDK TCF services
+23:56:30 INFO  : Launching XSCT server: xsct.bat -interactive D:\CSULB_Classes\CECS_461\Lab_2\project_2\project_2.sdk\temp_xsdb_launch_script.tcl
+23:56:37 INFO  : XSCT server has started successfully.
+23:56:43 INFO  : Successfully done setting XSCT server connection channel  
+23:56:43 INFO  : Successfully done setting SDK workspace  
+23:56:43 INFO  : Processing command line option -hwspec D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper.hdf.
+23:56:43 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_1.
+10:17:02 INFO  : Launching XSCT server: xsct.bat -interactive D:\CSULB_Classes\CECS_461\Lab_2\project_2\project_2.sdk\temp_xsdb_launch_script.tcl
+10:17:08 INFO  : XSCT server has started successfully.
+10:17:21 INFO  : Successfully done setting XSCT server connection channel  
+10:17:21 INFO  : Successfully done setting SDK workspace  
+10:17:28 INFO  : Registering command handlers for SDK TCF services
+10:17:29 INFO  : Processing command line option -hwspec D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper.hdf.
+10:17:32 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_1.
+10:29:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:29:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA" && level==0} -index 1' command is executed.
+10:29:20 INFO  : FPGA configured successfully with bitstream "D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper_hw_platform_1/system_wrapper.bit"
+10:29:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA" && level==0} -index 1' command is executed.
+10:29:50 INFO  : 'fpga -state' command is executed.
+10:29:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:29:51 INFO  : Jtag cable 'Digilent Zybo Z7 210351A81A7FA' is selected.
+10:29:51 INFO  : 'jtag frequency' command is executed.
+10:29:51 INFO  : Sourcing of 'D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper_hw_platform_1/ps7_init.tcl' is done.
+10:29:51 INFO  : Context for 'APU' is selected.
+10:29:51 INFO  : Hardware design information is loaded from 'D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper_hw_platform_1/system.hdf'.
+10:29:51 INFO  : 'configparams force-mem-access 1' command is executed.
+10:29:51 INFO  : Context for 'APU' is selected.
+10:29:51 INFO  : 'stop' command is executed.
+10:29:52 INFO  : 'ps7_init' command is executed.
+10:29:52 INFO  : 'ps7_post_config' command is executed.
+10:29:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:29:52 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:29:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:29:52 INFO  : The application 'D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/TestApp/Debug/TestApp.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:29:52 INFO  : 'configparams force-mem-access 0' command is executed.
+10:29:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper_hw_platform_1/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+loadhw -hw D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper_hw_platform_1/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+dow D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/TestApp/Debug/TestApp.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:29:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:29:53 INFO  : 'con' command is executed.
+10:29:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A81A7FA"} -index 0
+con
+----------------End of Script----------------
+
+10:29:53 INFO  : Disconnected from the channel tcfchan#1.
+20:00:45 INFO  : Launching XSCT server: xsct.bat -interactive D:\CSULB_Classes\CECS_461\Lab_2\project_2\project_2.sdk\temp_xsdb_launch_script.tcl
+20:00:51 INFO  : XSCT server has started successfully.
+20:01:05 INFO  : Successfully done setting XSCT server connection channel  
+20:01:05 INFO  : Successfully done setting SDK workspace  
+20:01:09 INFO  : Registering command handlers for SDK TCF services
+20:01:11 INFO  : Processing command line option -hwspec D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper.hdf.
+20:01:12 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_1.
+20:12:39 INFO  : Launching XSCT server: xsct.bat -interactive D:\CSULB_Classes\CECS_461\Lab_2\project_2\project_2.sdk\temp_xsdb_launch_script.tcl
+20:12:44 INFO  : XSCT server has started successfully.
+20:12:44 INFO  : Successfully done setting XSCT server connection channel  
+20:12:57 INFO  : Successfully done setting SDK workspace  
+20:13:01 INFO  : Registering command handlers for SDK TCF services
+20:13:03 INFO  : Processing command line option -hwspec D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper.hdf.
+20:13:04 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_1.
+20:34:42 INFO  : Launching XSCT server: xsct.bat -interactive D:\CSULB_Classes\CECS_461\Lab_2\project_2\project_2.sdk\temp_xsdb_launch_script.tcl
+20:34:47 INFO  : XSCT server has started successfully.
+20:35:00 INFO  : Successfully done setting XSCT server connection channel  
+20:35:00 INFO  : Successfully done setting SDK workspace  
+20:35:05 INFO  : Registering command handlers for SDK TCF services
+20:35:06 INFO  : Processing command line option -hwspec D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper.hdf.
+20:35:08 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_1.
+13:39:35 INFO  : Launching XSCT server: xsct.bat -interactive D:\CSULB_Classes\CECS_461\Lab_2\project_2\project_2.sdk\temp_xsdb_launch_script.tcl
+13:39:41 INFO  : XSCT server has started successfully.
+13:39:54 INFO  : Successfully done setting XSCT server connection channel  
+13:39:54 INFO  : Successfully done setting SDK workspace  
+13:40:00 INFO  : Registering command handlers for SDK TCF services
+13:40:01 INFO  : Processing command line option -hwspec D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper.hdf.
+13:40:02 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_1.
+13:53:27 INFO  : Launching XSCT server: xsct.bat -interactive D:\CSULB_Classes\CECS_461\Lab_2\project_2\project_2.sdk\temp_xsdb_launch_script.tcl
+13:53:33 INFO  : XSCT server has started successfully.
+13:53:44 INFO  : Successfully done setting XSCT server connection channel  
+13:53:44 INFO  : Successfully done setting SDK workspace  
+13:53:48 INFO  : Registering command handlers for SDK TCF services
+13:53:50 INFO  : Processing command line option -hwspec D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper.hdf.
+13:53:51 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_1.
+13:55:02 ERROR : Failed to connect to hardware server on host '127.0.0.1' and port '3121'.
+Reason: No connection could be made because the target machine actively refused it
+13:55:55 ERROR : Failed to connect to hardware server on host '127.0.0.1' and port '3121'.
+Reason: No connection could be made because the target machine actively refused it
+13:57:37 ERROR : Failed to connect to hardware server on host '127.0.0.1' and port '3121'.
+Reason: No connection could be made because the target machine actively refused it
+13:58:06 ERROR : Failed to connect to hardware server on host '127.0.0.1' and port '3121'.
+Reason: No connection could be made because the target machine actively refused it
+13:58:28 ERROR : Failed to connect to hardware server on host '127.0.0.1' and port '3121'.
+Reason: No connection could be made because the target machine actively refused it
+17:57:51 INFO  : Launching XSCT server: xsct.bat -interactive D:\CSULB_Classes\CECS_461\Lab_2\project_2\project_2.sdk\temp_xsdb_launch_script.tcl
+17:57:58 INFO  : XSCT server has started successfully.
+17:57:58 INFO  : Successfully done setting XSCT server connection channel  
+17:58:11 INFO  : Successfully done setting SDK workspace  
+17:58:16 INFO  : Registering command handlers for SDK TCF services
+17:58:17 INFO  : Processing command line option -hwspec D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper.hdf.
+17:58:18 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_1.

@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Mar  9 17:56:04 2019
+# Process ID: 31772
+# Current directory: D:/CSULB_Classes/CECS_461/Lab_2/project_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent32660 D:\CSULB_Classes\CECS_461\Lab_2\project_2\project_2.xpr
+# Log file: D:/CSULB_Classes/CECS_461/Lab_2/project_2/vivado.log
+# Journal file: D:/CSULB_Classes/CECS_461/Lab_2/project_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:59 ; elapsed = 00:00:33 . Memory (MB): peak = 778.824 ; gain = 166.445
+update_compile_order -fileset sources_1
+launch_sdk -workspace D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk -hwspec D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk -hwspec D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1050.262 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210351A81A7FA
+open_hw_target: Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1763.613 ; gain = 713.352
+set_property PROGRAM.FILE {D:/CSULB_Classes/CECS_461/Lab_2/project_2/project_2.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Mar  9 17:59:00 2019...
