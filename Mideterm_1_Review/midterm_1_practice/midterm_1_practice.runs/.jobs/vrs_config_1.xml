@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<Runs Version="1" Minor="0">
-	<Run Id="midterm_1_practice_processing_system7_0_0_synth_1" LaunchDir="D:/CSULB_Classes/CECS_461/Mideterm_1_Review/midterm_1_practice/midterm_1_practice.runs/midterm_1_practice_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-	<Parameters>
-		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
-	</Parameters>
-</Runs>
-
