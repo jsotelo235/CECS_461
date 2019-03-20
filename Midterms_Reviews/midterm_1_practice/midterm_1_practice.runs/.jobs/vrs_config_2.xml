@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="midterm_1_practice_processing_system7_0_0_synth_1" LaunchDir="D:/CSULB_Classes/CECS_461/Mideterm_1_Review/midterm_1_practice/midterm_1_practice.runs/midterm_1_practice_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="midterm_1_practice_xbar_0_synth_1" LaunchDir="D:/CSULB_Classes/CECS_461/Mideterm_1_Review/midterm_1_practice/midterm_1_practice.runs/midterm_1_practice_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="midterm_1_practice_rst_ps7_0_100M_0_synth_1" LaunchDir="D:/CSULB_Classes/CECS_461/Mideterm_1_Review/midterm_1_practice/midterm_1_practice.runs/midterm_1_practice_rst_ps7_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="midterm_1_practice_axi_gpio_0_0_synth_1" LaunchDir="D:/CSULB_Classes/CECS_461/Mideterm_1_Review/midterm_1_practice/midterm_1_practice.runs/midterm_1_practice_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="midterm_1_practice_auto_pc_0_synth_1" LaunchDir="D:/CSULB_Classes/CECS_461/Mideterm_1_Review/midterm_1_practice/midterm_1_practice.runs/midterm_1_practice_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="midterm_1_practice_axi_gpio_0_4_synth_1" LaunchDir="D:/CSULB_Classes/CECS_461/Mideterm_1_Review/midterm_1_practice/midterm_1_practice.runs/midterm_1_practice_axi_gpio_0_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="midterm_1_practice_axi_gpio_0_1_synth_1" LaunchDir="D:/CSULB_Classes/CECS_461/Mideterm_1_Review/midterm_1_practice/midterm_1_practice.runs/midterm_1_practice_axi_gpio_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="D:/CSULB_Classes/CECS_461/Mideterm_1_Review/midterm_1_practice/midterm_1_practice.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="midterm_1_practice_processing_system7_0_0_synth_1"/>
+		<Parent Id="midterm_1_practice_xbar_0_synth_1"/>
+		<Parent Id="midterm_1_practice_rst_ps7_0_100M_0_synth_1"/>
+		<Parent Id="midterm_1_practice_axi_gpio_0_0_synth_1"/>
+		<Parent Id="midterm_1_practice_auto_pc_0_synth_1"/>
+		<Parent Id="midterm_1_practice_axi_gpio_0_4_synth_1"/>
+		<Parent Id="midterm_1_practice_axi_gpio_0_1_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+
