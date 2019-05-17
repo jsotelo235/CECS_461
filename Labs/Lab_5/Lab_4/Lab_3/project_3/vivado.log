@@ -1,0 +1,101 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Mar 16 13:37:19 2019
+# Process ID: 14340
+# Current directory: D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10460 D:\CSULB_Classes\CECS_461\Lab_4\Lab_3\project_3\project_3.xpr
+# Log file: D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_3/vivado.log
+# Journal file: D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_3/project_3.xpr
+INFO: [Project 1-313] Project file moved from 'D:/CSULB_Classes/CECS_461/Lab_3/project_3' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/CSULB_Classes/CECS_461/Lab_4/Lab_3/led_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:01:01 ; elapsed = 00:00:32 . Memory (MB): peak = 718.391 ; gain = 123.156
+update_compile_order -fileset sources_1
+save_project_as project_4 D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_4 -force
+save_project_as: Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 840.328 ; gain = 0.000
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210351A81A7FA
+open_hw_target: Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1749.309 ; gain = 900.023
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+open_bd_design {D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_4/project_4.srcs/sources_1/bd/system/system.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - switches
+Adding cell -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - buttons
+Adding cell -- xilinx.com:user:led_ip:1.0 - led_ip
+Adding cell -- xilinx.com:ip:axi_bram_ctrl:4.1 - axi_bram_ctrl_0
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - axi_bram_ctrl_0_bram
+Successfully read diagram <system> from BD file <D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_4/project_4.srcs/sources_1/bd/system/system.bd>
+open_bd_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:28 . Memory (MB): peak = 1879.938 ; gain = 94.168
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Sat Mar 16 14:02:59 2019] Launched synth_1...
+Run output will be captured here: D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_4/project_4.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Sat Mar 16 14:05:17 2019] Launched impl_1...
+Run output will be captured here: D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_4/project_4.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sat Mar 16 14:18:29 2019] Launched impl_1...
+Run output will be captured here: D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_4/project_4.runs/impl_1/runme.log
+file copy -force D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_4/project_4.runs/impl_1/system_wrapper.sysdef D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_4/project_4.sdk/system_wrapper.hdf
+
+launch_sdk -workspace D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_4/project_4.sdk -hwspec D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_4/project_4.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_4/project_4.sdk -hwspec D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_4/project_4.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+file mkdir D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_4/project_4.sdk
+file copy -force D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_4/project_4.runs/impl_1/system_wrapper.sysdef D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_4/project_4.sdk/system_wrapper.hdf
+
+launch_sdk -workspace D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_4/project_4.sdk -hwspec D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_4/project_4.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_4/project_4.sdk -hwspec D:/CSULB_Classes/CECS_461/Lab_4/Lab_3/project_4/project_4.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210351A81A7FA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210351A81A7FA
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210351A81A7FA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210351A81A7FA
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 16 21:16:41 2019...
